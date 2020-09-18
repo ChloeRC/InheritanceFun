@@ -8,19 +8,20 @@
 
 import Foundation
 
-class Employee {
-    var name: String = ""
-    var salary: Double = 0.0
+class Employee: CustomStringConvertible {
+    var name: String
+    var salary: Double
     var description: String {
-        return "\(name)"
+        return "My name is \(name) and I make $\(salary)"
     }
     
     init(name: String) {
         self.name = name
-        salary = 40000
+        salary = 40_000
     }
     
     func raise() {
-        
+        // we don't have the abstract keyword in swift
+        print("To be implemented by a subclass")
     }
 }
