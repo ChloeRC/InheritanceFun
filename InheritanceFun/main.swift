@@ -40,6 +40,20 @@ func employeeTester() {
     // an array of Employee references
     var employees: [Employee] = []
     // TODO: add some Programmers to the array
+    
+    employees.append(Programmer(name: "Chloe", busPass: true))
+    employees.append(Lawyer(name: "Rudolph", stockOptions: 30))
+    employees.append(Accountant(name: "Reuben", parkingAllowance: 20.0))
+    employees.append(Programmer(name: "Fikus", busPass: true))
+    
+    for emp in employees {
+        print(emp)
+        emp.raise()
+    }
+    print("After raise...")
+    for emp in employees {
+        print(emp)
+    }
 }
 
 employeeTester()
